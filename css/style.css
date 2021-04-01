@@ -68,11 +68,12 @@ h1 {
 .trilogy h1,
 .dole h1 {
     text-align: center;
-    font-family: proxima-nova, Helvetica, Arial, sans-serif;
+    font-family: "proxima-nova", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 4em;
     line-height: 1.1em;
+    text-transform: uppercase;
 }
 
 .citylogo h2,
@@ -131,6 +132,7 @@ p {
     -webkit-background-clip: text;
     background-size: 400%;
     animation: animatedGradient 3s ease infinite;
+    text-align: center;
 }
 
 @keyframes animatedGradient {
@@ -372,9 +374,18 @@ body {
 .trilogy p,
 .pictogram p,
 .dole p,
+.bookcover p,
 .brochure p,
 .citylogo p {
     padding-bottom: 3em;
+}
+
+.p-left {
+    padding-left: 3em
+}
+
+.p-right {
+    padding-right: 3em
 }
 
 
@@ -403,6 +414,12 @@ body {
         margin-left: -1%;
         margin-right: -1%;
     }
+    .row.nomargin .column {
+        margin: 0;
+    }
+    .row.nomargin img {
+        display: block;
+    }
     .swap {
         flex-direction: row-reverse;
     }
@@ -411,7 +428,7 @@ body {
         align-items: center;
     }
     .column {
-        flex-grow: 1;
+        /* flex-grow: 1; */
         margin: 1%;
     }
 }
@@ -432,6 +449,8 @@ body {
 
 /* #CLEARFIXES */
 
+
+/* 
 .group:after,
 .row:after,
 .container:after,
@@ -441,6 +460,7 @@ body {
     clear: both;
     font-size: 0;
 }
+ */
 
 
 /* Header & Footer */
@@ -540,6 +560,18 @@ li {
 
 section {
     padding: 1.5em 0;
+}
+
+
+/* about info */
+
+.info h3 {
+    padding-top: 3em;
+}
+
+.info h3,
+.info p {
+    text-align: center;
 }
 
 
