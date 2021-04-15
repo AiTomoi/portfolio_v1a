@@ -135,6 +135,11 @@ p {
     text-align: center;
 }
 
+.site-branding p {
+    font-size: 1em;
+    margin-top: 0;
+}
+
 @keyframes animatedGradient {
     0% {
         background-position: 0% 50%;
@@ -729,12 +734,14 @@ body {
 }
 
 .thumbgrid li {
+    position: relative;
     list-style: none;
     width: 46%;
     margin: 2%;
     padding: 0;
-    border-radius: 100%;
+    border-radius: 50%;
     overflow: hidden;
+    clip-path: circle(100% at 50% 50%);
     /* padding-bottom: 0.4%; */
 }
 
@@ -744,10 +751,16 @@ body {
     }
 }
 
+.thumbgrid.small li {
+    width: 10%;
+}
+
 .thumbgrid a {
     display: block;
 }
 
+
+/*  
 .thumbgrid a img {
     filter: brightness(1.05);
     transition: all ease-in-out 0.2s;
@@ -756,7 +769,7 @@ body {
 
 .thumbgrid a:hover img {
     filter: brightness(1);
-}
+}*/
 
 .icon-char {
     font-size: 2em;
@@ -810,6 +823,10 @@ body {
 
 /* Hover Caps */
 
+.hovercaps {
+    position: relative;
+}
+
 .hovercaps a {
     display: block;
     position: relative;
@@ -819,6 +836,12 @@ body {
 
 .hovercaps img {
     display: block;
+}
+
+.hovercaps.small .caption h3 {
+    font-size: 1.5vw;
+    line-height: 1;
+    text-align: center;
 }
 
 .hovercaps .caption {
@@ -831,8 +854,9 @@ body {
     border: none;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease-in;
     transform: translate(-101%, 0);
     font-family: "mr-eaves-xl-modern", Arial, Helvetica, sans-serif;
