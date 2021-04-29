@@ -921,7 +921,7 @@ body {
 */
 
 .hovercaps a:hover .caption {
-    animation: hoverfade 0.5s linear both;
+    animation: hoverfade 1s linear both;
 }
 
 @keyframes hoverfade {
