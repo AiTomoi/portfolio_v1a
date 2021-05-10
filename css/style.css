@@ -780,10 +780,9 @@ body {
     .thumbgrid li {
         width: 29.333%;
     }
-}
-
-.thumbgrid.small li {
-    width: 10%;
+    .thumbgrid.small li {
+        width: 15%;
+    }
 }
 
 .thumbgrid a {
@@ -869,13 +868,16 @@ body {
     display: block;
 }
 
-.hovercaps.small .caption h3 {
-    font-size: 3vw;
+
+/* 
+.hovercaps.small .caption2 h3 {
+    font-size: 2vw;
     line-height: 1;
     text-align: center;
-}
+} */
 
-.hovercaps .caption {
+.hovercaps .caption,
+.hovercaps .caption2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -901,6 +903,29 @@ body {
     font-weight: 100;
 }
 
+.hovercaps .caption2 h3 {
+    font-family: "mr-eaves", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 2.5em;
+    line-height: 1.2;
+    font-weight: 100;
+    text-align: center;
+}
+
+a.caption2 h3 {
+    visibility: hidden;
+}
+
+.caption2 h3 a:hover {
+    visibility: visible;
+}
+
+@media (min-width: 768px) {
+    .hovercaps .caption2 h3 {
+        font-size: 3em;
+    }
+}
+
 
 /* .hovercaps .caption.blue { 
     --move: translate(101%, 0%);
@@ -924,13 +949,16 @@ body {
     animation: hoverfade 1.5s linear both;
 }
 
+
+/* change the seconds on the hoverfade to make the animation go faster/slower */
+
 @keyframes hoverfade {
     0% {
         opacity: 0.7;
     }
-    10% {
+    /* 10% {
         opacity: 1;
-    }
+    } */
     100% {
         opacity: 0;
     }
@@ -939,3 +967,8 @@ body {
 .hovercaps h3 {
     margin: 0;
 }
+
+
+/* .hovercaps.small .caption .caption2 h3 {
+    font-size: 1em;
+} */
